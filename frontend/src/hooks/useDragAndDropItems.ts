@@ -34,8 +34,8 @@ const useDragAndDropItems = () => {
         list2[Number(dragItem)] = list2[Number(dragOverItem)];
         list2[Number(dragOverItem)] = item1;
 
-        setList(list2);
-        updateBlocks(list2)
+        setList(list2.map((_i, index) => ({ ..._i, position: index })));
+        updateBlocks(list2.map((_i, index) => ({ ..._i, position: index })))
           .then((data) => console.log("data is", data))
           .catch((err) => console.log("error is", err));
       }

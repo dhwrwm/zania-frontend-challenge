@@ -33,6 +33,8 @@ function App() {
     setClickedId(null);
   }, []);
 
+  console.log("selectedImage", selectedImage);
+
   useEffect(() => {
     window.addEventListener("keydown", function (e) {
       if (e.key === "Escape") {
