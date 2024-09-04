@@ -6,7 +6,6 @@ import {
   lazy,
   Suspense,
 } from "react";
-import data from "./data.json";
 import { Nullable } from "./types/common";
 import classNames from "classnames";
 import LazyImage from "./components/lazy-image";
@@ -20,7 +19,7 @@ function App() {
     useDragAndDropItems();
 
   const selectedImage = useMemo(() => {
-    const selected = data.find((_d) => _d.type === clickedId);
+    const selected = list.find((_d) => _d.type === clickedId);
     if (selected) {
       return list[selected.position].image;
     }

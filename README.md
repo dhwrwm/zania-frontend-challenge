@@ -8,5 +8,6 @@
 
 # How to run
 
-1.  cd frontend/
-2.  yarn && yarn start
+1. cd frontend/
+2. yarn && yarn start
+3. Open http://localhost:3000/
